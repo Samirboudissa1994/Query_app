@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/tyyli.css') }}">
+</head>
+<body onload="alkuTilanne()">
+    <header id="sivuheader" role="banner"></header>
+    <div id="wrapper">
+        <div id="header">
+            <h2 id="title">Haastattelusovellus</h2>
+        </div>
+        <div id="container">
+            <div id="content">
+                <p id="kysy">Oletko?</p>
+                <button type="button" id="alle29" onclick="allekaksysi()">Alle 29-vuotias</button>
+                <button type="button" id="yli29" onclick="ylikaksysi()">Yli 29-vuotias</button>
+                <button type="button" id="koulutus" onclick="koulutusTarjonta()">koulutus</button>
+                <button type="button" id="tyoharjoittelu" onclick="tyoharjoitteluTarjonta()">Työharjoittelu</button>
+                <button type="button" id="takaisinNappula" onclick="alkuTilanne()">Takaisin</button>
+                <button type="button" id="takaisinAlle29" onclick="allekaksysi()">Takaisin</button>
+                <button type="button" id="takaisinYli29" onclick="ylikaksysi()">Takaisin</button>
+                <button type="button" id="takaisinKoulutus" onclick="koulutusTarjonta()">Takaisin</button>
+                <button type="button" id="ammattikoulu" onclick="ammattiKouluTarjonta()">Ammatillinen koulutus</button>
+                <button type="button" id="lukio" onclick="lukioTarjonta()">Ylioppilas-tutkinto</button>
+                <h2 id="sipoonlukio">Enter Sipoo/Sipoon Lukio</h2>
+                <p id="slsp">email: lukio@sipoo.fi</p>
+                <p id="slph">kanslia: +358 (0)40 191 4577</p>
+                <h2 id="keudasipoo">Keuda Sipoo Enter</h2>
+                <p id="keudavastaava">Toimipistevastaava: Jari Haapala</p>
+                <p id="kssp">email: jari.haapala@keuda.fi</p>
+                <p id="ksph">puh: 050 4628 822</p>
+                <a id="molfi" target="_blank" href="https://www.te-palvelut.fi/tyonhakijalle/loyda-toita">Te-palvelut: löydä töitä</a>
+            </div>
+        </div>
+        <footer id="jalkainen">
+            <span id="copyright">© Samir Boudissa</span>
+        </footer>
+    </div>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>
